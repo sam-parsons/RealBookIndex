@@ -35,7 +35,7 @@ class App extends React.Component {
   };
 
   handleClear = () => {
-    this.setState({ resultsArr: [] }, () => console.log(this.state.resultsArr));
+    this.setState({ resultsArr: [], searchValue: "" });
   };
 
   render() {
@@ -46,6 +46,7 @@ class App extends React.Component {
           <Searchbar
             handleSubmit={this.handleSubmit}
             handleSearch={this.handleSearch}
+            searchValue={this.state.searchValue}
           />
           <Results
             resultsArr={this.state.resultsArr}

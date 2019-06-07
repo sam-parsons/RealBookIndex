@@ -14,10 +14,11 @@ const Searchbar = props => (
       <Form onSubmit={props.handleSubmit}>
         <InputGroup className="mb-3" size="lg">
           <FormControl
-            placeholder="Recipient's username"
-            aria-label="Recipient's username"
+            placeholder="Enter song title"
+            aria-label="song title"
             aria-describedby="basic-addon2"
             onChange={props.handleSearch}
+            value={props.searchValue}
           />
           <InputGroup.Append>
             <Button variant="outline-secondary" type="submit">

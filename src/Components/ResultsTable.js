@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Styles = styled.div`
   font-family: "Montserrat", sans-serif;
-  font-size: 30px;
+  font-size: 20px;
 `;
 
 const ResultsTable = props => (
