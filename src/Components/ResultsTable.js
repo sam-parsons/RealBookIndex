@@ -1,4 +1,5 @@
 import React from "react";
+import ClearBtn from "./ClearBtn";
 import Table from "react-bootstrap/Table";
 import styled from "styled-components";
 
@@ -25,6 +26,7 @@ const ResultsTable = props => (
         ))}
       </tbody>
     </Table>
+    <ClearBtn handleClear={props.handleClear} />
   </Styles>
 );
 

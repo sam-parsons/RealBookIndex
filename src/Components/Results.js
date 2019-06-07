@@ -14,7 +14,10 @@ const Styles = styled.div`
 const Results = props => (
   <Styles>
     <div className="main">
-      <ResultsTable resultsArr={props.resultsArr} />
+      <ResultsTable
+        resultsArr={props.resultsArr}
+        handleClear={props.handleClear}
+      />
     </div>
   </Styles>
 );

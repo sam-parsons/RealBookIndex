@@ -7,7 +7,6 @@ import "./App.css";
 class App extends React.Component {
   state = {
     searchValue: "",
-    resultsText: "",
     resultsArr: []
   };
 
@@ -17,9 +16,8 @@ class App extends React.Component {
   };
 
   handleSubmit = e => {
-    // console.log(this.state.searchValue);
+    console.log(this.state.searchValue);
 
-    // fetch
     fetch("https://realbookindex-api.herokuapp.com/", {
       method: "POST",
       mode: "cors",
@@ -31,14 +29,13 @@ class App extends React.Component {
       })
     })
       .then(res => res.json())
-      // .then(res => console.log(res.data));
-      .then(res =>
-        this.setState({ resultsArr: res.data }, () =>
-          console.log(this.state.resultsArr)
-        )
-      );
+      .then(res => this.setState({ resultsArr: res.data }));
 
     e.preventDefault();
+  };
+
+  handleClear = () => {
+    this.setState({ resultsArr: [] }, () => console.log(this.state.resultsArr));
   };
 
   render() {
@@ -50,7 +47,10 @@ class App extends React.Component {
             handleSubmit={this.handleSubmit}
             handleSearch={this.handleSearch}
           />
-          <Results resultsArr={this.state.resultsArr} />
+          <Results
+            resultsArr={this.state.resultsArr}
+            handleClear={this.handleClear}
+          />
         </header>
       </div>
     );
