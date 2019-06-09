@@ -10,9 +10,9 @@ class App extends React.Component {
     searchPlaceholder: "Enter song title",
     resultsArr: [],
     resultsSong: "",
-    // normalArr: [],
     loading: false,
-    songList: []
+    songList: [],
+    typeaheadRef: {}
   };
 
   componentDidMount = () => {
@@ -21,24 +21,19 @@ class App extends React.Component {
       mode: "cors"
     })
       .then(res => res.json())
-      .then(res =>
-        this.setState({ songList: res.data }, () => {
-          // const normalArr = res.data;
-          // const len = res.data.length;
-          // for (let i = 0; i < len; i++) {
-          //   normalArr[i] = normalArr[i].toLowerCase();
-          // }
-          // this.setState({ normalArr }, () => console.log(normalArr));
-        })
-      );
+      .then(res => this.setState({ songList: res.data }, () => {}));
   };
 
   handleSearch = e => {
-    this.setState({ searchValue: e.target.value });
-    e.preventDefault();
+    this.setState({ searchValue: e }, () => console.log(e));
+  };
+
+  handleSelect = e => {
+    this.setState({ searchValue: e }, () => console.log(e));
   };
 
   handleSubmit = e => {
+    console.log(this.typeahead);
     this.toggleLoading();
     fetch("https://realbookindex-api.herokuapp.com/", {
       method: "POST",
@@ -68,7 +63,9 @@ class App extends React.Component {
   };
 
   handleClear = () => {
-    this.setState({ resultsArr: [], resultsSong: "", searchValue: "" });
+    this.setState({ resultsArr: [], resultsSong: "", searchValue: "" }, () => {
+      this.handleSearch("");
+    });
   };
 
   toggleLoading = () => this.setState({ loading: !this.state.loading });
@@ -81,6 +78,7 @@ class App extends React.Component {
           <Searchbar
             handleSubmit={this.handleSubmit}
             handleSearch={this.handleSearch}
+            handleSelect={this.handleSelect}
             searchValue={this.state.searchValue}
             loading={this.state.loading}
             songList={this.state.songList}
