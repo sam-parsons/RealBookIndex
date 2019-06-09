@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/RealBookIndex/static/css/main.1417bbf5.chunk.css",
-    "main.js": "/RealBookIndex/static/js/main.8512de38.chunk.js",
-    "main.js.map": "/RealBookIndex/static/js/main.8512de38.chunk.js.map",
+    "main.js": "/RealBookIndex/static/js/main.19fc4e5a.chunk.js",
+    "main.js.map": "/RealBookIndex/static/js/main.19fc4e5a.chunk.js.map",
     "runtime~main.js": "/RealBookIndex/static/js/runtime~main.1b1bf606.js",
     "runtime~main.js.map": "/RealBookIndex/static/js/runtime~main.1b1bf606.js.map",
     "static/js/2.63ef1e6f.chunk.js": "/RealBookIndex/static/js/2.63ef1e6f.chunk.js",
     "static/js/2.63ef1e6f.chunk.js.map": "/RealBookIndex/static/js/2.63ef1e6f.chunk.js.map",
     "index.html": "/RealBookIndex/index.html",
-    "precache-manifest.6316587a89d31d53d0d367df972664d1.js": "/RealBookIndex/precache-manifest.6316587a89d31d53d0d367df972664d1.js",
+    "precache-manifest.8f19513a153ad953dbd3cdc95bd95830.js": "/RealBookIndex/precache-manifest.8f19513a153ad953dbd3cdc95bd95830.js",
     "service-worker.js": "/RealBookIndex/service-worker.js",
     "static/css/main.1417bbf5.chunk.css.map": "/RealBookIndex/static/css/main.1417bbf5.chunk.css.map"
   }
