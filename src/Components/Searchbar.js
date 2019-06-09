@@ -15,6 +15,16 @@ const Styles = styled.div`
     padding-left: 13px;
   }
 
+  .dropdown-menu {
+    background: #777;
+  }
+  .dropdown-item {
+    color: #fff;
+  }
+  .dropdown-item:hover {
+    color: #000;
+  }
+
   @media (max-width: 480px) {
     .form-control {
       font-size: 20px;
@@ -53,9 +63,12 @@ class Searchbar extends React.Component {
                 options={this.props.songList}
                 onInputChange={this.props.handleSearch}
                 onChange={this.props.handleSelect}
-                minLength={2}
+                minLength={3}
                 bsSize="large"
                 placeholder="Enter song title..."
+                highlightOnlyResult
+                selectHintOnEnter
+                autoFocus
                 ref={typeahead => (this.typeahead = typeahead)}
               />
               <InputGroup.Append>
