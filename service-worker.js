@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/RealBookIndex/precache-manifest.24d19b4e1aace3bb49229f6c70ebf182.js"
+  "/RealBookIndex/precache-manifest.79aaeba87c4c14e163d2f14a34ef3dab.js"
 );
 
 self.addEventListener('message', (event) => {
