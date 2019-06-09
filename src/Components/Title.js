@@ -7,7 +7,7 @@ const Styles = styled.div`
   padding-bottom: 40px;
 
   @media (max-width: 480px) {
-    font-size: 45px;
+    font-size: 40px;
   }
 `;
 

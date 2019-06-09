@@ -4,7 +4,6 @@ import Spinner from "react-bootstrap/Spinner";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import Form from "react-bootstrap/Form";
-
 import Button from "react-bootstrap/Button";
 
 const Styles = styled.div`
@@ -16,6 +15,14 @@ const Styles = styled.div`
   }
 
   @media (max-width: 480px) {
+    .form-control {
+      font-size: 20px;
+    }
+
+    .btn {
+      font-size: medium !important;
+    }
+
     .mb-3 {
       width: 90vw;
     }

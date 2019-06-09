@@ -1,4 +1,5 @@
 import React from "react";
+import ResultsSong from "./ResultsSong";
 import ResultsTable from "./ResultsTable";
 import styled from "styled-components";
 
@@ -14,6 +15,7 @@ const Styles = styled.div`
 const Results = props => (
   <Styles>
     <div className="main">
+      <ResultsSong resultsSong={props.resultsSong} />
       <ResultsTable
         resultsArr={props.resultsArr}
         handleClear={props.handleClear}

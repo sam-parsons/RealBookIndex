@@ -7,8 +7,20 @@ import "./App.css";
 class App extends React.Component {
   state = {
     searchValue: "",
+    searchPlaceholder: "Enter song title",
     resultsArr: [],
-    loading: false
+    resultsSong: "",
+    loading: false,
+    songList: []
+  };
+
+  componentDidMount = () => {
+    fetch("https://realbookindex-api.herokuapp.com/", {
+      method: "GET",
+      mode: "cors"
+    })
+      .then(res => res.json())
+      .then(res => this.setState({ songList: res.data }));
   };
 
   handleSearch = e => {
@@ -30,17 +42,25 @@ class App extends React.Component {
       })
     })
       .then(res => res.json())
-      .then(res =>
-        this.setState({ resultsArr: res.data }, () => {
-          this.toggleLoading();
-        })
-      );
+      .then(res => {
+        console.log(res.data);
+        this.setState(
+          {
+            resultsArr: res.data.length > 0 ? res.data : [],
+            resultsSong: res.data.length > 0 ? res.data[0].title : "Not Found",
+            searchValue: ""
+          },
+          () => {
+            this.toggleLoading();
+          }
+        );
+      });
 
     e.preventDefault();
   };
 
   handleClear = () => {
-    this.setState({ resultsArr: [], searchValue: "" });
+    this.setState({ resultsArr: [], resultsSong: "", searchValue: "" });
   };
 
   toggleLoading = () => this.setState({ loading: !this.state.loading });
@@ -58,6 +78,7 @@ class App extends React.Component {
           />
           <Results
             resultsArr={this.state.resultsArr}
+            resultsSong={this.state.resultsSong}
             handleClear={this.handleClear}
           />
         </header>

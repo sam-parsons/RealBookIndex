@@ -8,6 +8,8 @@ const Styles = styled.div`
   font-size: 20px;
 
   @media (max-width: 480px) {
+    font-size: 14px;
+
     .table {
       width: 90vw;
     }
