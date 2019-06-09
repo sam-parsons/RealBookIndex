@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "12ea4577a7a452c0f9a1965699ba82c4",
+    "revision": "afa9248e63ba36bd5f86928201fa3faf",
     "url": "/RealBookIndex/index.html"
   },
   {
-    "revision": "3a57c8932758fdc1c469",
+    "revision": "d4e6b6f5e288b2ebe01a",
     "url": "/RealBookIndex/static/css/main.1417bbf5.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/RealBookIndex/static/js/2.63ef1e6f.chunk.js"
   },
   {
-    "revision": "3a57c8932758fdc1c469",
-    "url": "/RealBookIndex/static/js/main.19fc4e5a.chunk.js"
+    "revision": "d4e6b6f5e288b2ebe01a",
+    "url": "/RealBookIndex/static/js/main.c7d36a89.chunk.js"
   },
   {
     "revision": "d776b9e4b87cc5f06187",
