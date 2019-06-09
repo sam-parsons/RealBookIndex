@@ -29,11 +29,12 @@ class App extends React.Component {
   };
 
   handleSelect = e => {
+    console.log(e);
     this.setState({ searchValue: e }, () => console.log(e));
   };
 
   handleSubmit = e => {
-    console.log(this.typeahead);
+    console.log(typeof this.state.searchValue);
     this.toggleLoading();
     fetch("https://realbookindex-api.herokuapp.com/", {
       method: "POST",
@@ -42,9 +43,13 @@ class App extends React.Component {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        title: this.state.searchValue
+        title:
+          typeof this.state.searchValue === "object"
+            ? this.state.searchValue.toString()
+            : this.state.searchValue
       })
     })
+      // .then(res => console.log(res.json()));
       .then(res => res.json())
       .then(res =>
         this.setState(
