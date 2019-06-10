@@ -6,12 +6,14 @@
   </a>
 </p>
 
-<!-- <a href="https://sam-parsons.github.io/RealBookIndex">
-  <img src="./assets/screenshot.gif" alt="screenshot" width="100%" />
-</a> -->
+<p align="center">
+    <a href="https://sam-parsons.github.io/RealBookIndex">
+    <img src="./screenshot.gif" alt="screenshot" width="40%" />
+    </a>
+</p>
 
-<!-- <br>
-<br> -->
+<br>
+<br>
 
 ## Installation
 
